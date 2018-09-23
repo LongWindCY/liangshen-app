@@ -26,3 +26,17 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.leftbar{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hearderbar{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
