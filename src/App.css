@@ -5,6 +5,7 @@
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  padding: 50px;
 }
 
 .App-header {
@@ -35,7 +36,7 @@
   justify-content: center;
 }
 .hearderbar{
-  width: 80%;
+  width: 60%;
   height: 100%;
   display: flex;
   justify-content: center;
