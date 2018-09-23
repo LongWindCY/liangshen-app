@@ -1,29 +1,30 @@
 import React from 'react';
-import MhSider from './fixed-component/MhSider';
+import MhSide from './fixed-component/MhSide';
 import MhHeader from './fixed-component/MhHeader';
+import MhFooter from './fixed-component/MhFooter';
+import Home from './mh-web/mh-home/Home';
 import '../css/App.css';
 import 'antd/dist/antd.css';
-import { Layout } from 'antd';
+import {Layout} from "antd";
 
-const { Content, Footer } = Layout;
+const {Sider, Header, Content, Footer}=Layout;
 
 class App extends React.Component {
     render() {
         return (
             <Layout>
-                <MhSider/>
+                <Sider collapsed= 'true'>
+                    <MhSide/>
+                </Sider>
                 <Layout>
-                    <MhHeader/>
+                    <Header>
+                        <MhHeader/>
+                    </Header>
                     <Content>
-                        <div style={{
-                            background: '#fff',
-                            padding: 24,
-                            minHeight: 1000,
-                            backgroundImage: "url(" + require("../../img/city.png") + ")"
-                        }}>Content</div>
+                        <Home/>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>
-                        Ant Design ©2018 Created by Ant UED
+                    <Footer>
+                        <MhFooter/>
                     </Footer>
                 </Layout>
             </Layout>

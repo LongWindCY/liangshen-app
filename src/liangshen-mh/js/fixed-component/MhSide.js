@@ -2,25 +2,14 @@ import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 
 const {Sider} = Layout;
-
-class MhSider extends React.Component {
-    state = {
-        collapsed: true,
-    };
-
-    toggle = () => {
-        this.setState({
-            collapsed: !this.state.collapsed,
-        });
-    }
-
+class MhSide extends React.Component {
     render() {
         return (
             <Sider
                 trigger={null}
                 collapsible
-                collapsed={this.state.collapsed}
-                style={{ position: 'fixed', height: '100%' }}
+                collapsed= 'true'
+                style={{ position: 'fixed', height: '100%', width: '50px' }}
             >
 
                 <div className="leftbar">
@@ -47,4 +36,4 @@ class MhSider extends React.Component {
     }
 }
 
-export default MhSider;
+export default MhSide;
