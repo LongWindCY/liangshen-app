@@ -38,15 +38,15 @@ class App extends React.Component {
                     >
                         <Menu.Item key="1">
                             <Icon type="user" />
-                            <span>個人信息</span>
+                            <span>个人信息</span>
                         </Menu.Item>
                         <Menu.Item key="2">
                             <Icon type="shopping-cart"/>
-                            <span>購物車</span>
+                            <span>购物车</span>
                         </Menu.Item>
                         <Menu.Item key="3">
                             <Icon type="home"/>
-                            <span>收貨地址</span>
+                            <span>收货地址</span>
                         </Menu.Item>
                     </Menu>
                 </Sider>
@@ -66,11 +66,11 @@ class App extends React.Component {
                                     // defaultSelectedKeys={['2']}
                                     style={{ lineHeight: '64px' }}
                                 >
-                                    <Menu.Item key="1">定制服務</Menu.Item>
+                                    <Menu.Item key="1">定制服务</Menu.Item>
                                     <Menu.Item key="2">成品衣物</Menu.Item>
-                                    <Menu.Item key="3">服裝配飾</Menu.Item>
-                                    <Menu.Item key="4">專家團隊</Menu.Item>
-                                    <Menu.Item key="5">聯繫我們</Menu.Item>
+                                    <Menu.Item key="3">服装配饰</Menu.Item>
+                                    <Menu.Item key="4">专家团队</Menu.Item>
+                                    <Menu.Item key="5">联系我们</Menu.Item>
                                 </Menu>
                             </Header>
 
