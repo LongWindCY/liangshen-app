@@ -1,5 +1,6 @@
 import {Layout, Menu} from "antd";
 import React from "react";
+import logo from '../../../img/logo.png'
 
 const SubMenu = Menu.SubMenu;
 const {Header} = Layout;
@@ -11,17 +12,13 @@ class MhHeader extends React.Component{
                     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
                         <div className="logo"
                              style={{
-                                 width: '120px',
-                                 height: '31px',
-                                 background: 'rgba(255,255,255,.2)',
-                                 margin: '16px 24px 16px 500px',
+                                 margin: '16px 0 16px 500px',
                                  float: 'left'
-                             }} />
+                             }}><img alt="dfasf" src={logo} style={{width: '120px', height: '31px',float: 'left'}}/></div>
                         <div className="hearderbar">
                             <Menu
                                 theme="dark"
                                 mode="horizontal"
-                                // defaultSelectedKeys={['2']}
                                 style={{ lineHeight: '64px' }}
                             >
                                 <SubMenu title={<span className="" key="1">定制服务</span>}>

@@ -21,9 +21,7 @@ class App extends React.Component {
                     <Content>
                         <Home/>
                     </Content>
-                    <Footer>
-                        <MhFooter/>
-                    </Footer>
+                    <MhFooter/>
                 </Layout>
             </Layout>
         );
