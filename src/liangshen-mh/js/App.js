@@ -7,7 +7,7 @@ import '../css/App.css';
 import 'antd/dist/antd.css';
 import {Layout} from "antd";
 
-const {Sider, Content, Footer}=Layout;
+const {Sider, Content}=Layout;
 
 class App extends React.Component {
     render() {
