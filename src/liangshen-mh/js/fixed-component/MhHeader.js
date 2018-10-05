@@ -10,12 +10,13 @@ class MhHeader extends React.Component{
             <Header style={{ background: '#fff', padding: 0 }}>
                 <Layout>
                     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+                        
+                        <div className="hearderbar">
                         <div className="logo"
                              style={{
                                  margin: '16px 0 16px 500px',
                                  float: 'left'
                              }}><img alt="dfasf" src={logo} style={{width: '120px', height: '31px',float: 'left'}}/></div>
-                        <div className="hearderbar">
                             <Menu
                                 theme="dark"
                                 mode="horizontal"
