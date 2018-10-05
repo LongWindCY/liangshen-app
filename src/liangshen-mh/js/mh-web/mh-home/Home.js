@@ -33,7 +33,7 @@ class Home extends React.Component{
                                 cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta
-                                    title="婚礼西服定制"
+                                    title="结婚西服定制"
                                     description="www.instagram.com"
                                 />
                             </Card></Col>
@@ -44,7 +44,7 @@ class Home extends React.Component{
                                 cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta
-                                    title="婚礼西服定制"
+                                    title="商务西服定制"
                                     description="www.instagram.com"
                                 />
                             </Card></Col>
@@ -61,7 +61,7 @@ class Home extends React.Component{
                                 cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta
-                                    title="婚礼西服定制"
+                                    title="休闲西服定制"
                                     description="www.instagram.com"
                                 />
                             </Card></Col>
@@ -72,7 +72,7 @@ class Home extends React.Component{
                                 cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta
-                                    title="婚礼西服定制"
+                                    title="韩版西服定制"
                                     description="www.instagram.com"
                                 />
                             </Card></Col>
@@ -83,7 +83,7 @@ class Home extends React.Component{
                                 cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta
-                                    title="婚礼西服定制"
+                                    title="团体西服定制"
                                     description="www.instagram.com"
                                 />
                             </Card></Col>
@@ -100,7 +100,7 @@ class Home extends React.Component{
                                 cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta
-                                    title="婚礼西服定制"
+                                    title="寸衫定制"
                                     description="www.instagram.com"
                                 />
                             </Card></Col>
@@ -111,7 +111,7 @@ class Home extends React.Component{
                                 cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta
-                                    title="婚礼西服定制"
+                                    title="大衣定制"
                                     description="www.instagram.com"
                                 />
                             </Card></Col>
@@ -122,7 +122,7 @@ class Home extends React.Component{
                                 cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                             >
                                 <Meta
-                                    title="婚礼西服定制"
+                                    title="更多定制"
                                     description="www.instagram.com"
                                 />
                             </Card></Col>
