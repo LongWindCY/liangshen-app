@@ -21,23 +21,11 @@ class App extends React.Component {
                 <Layout>
                     <MhHeader/>
                     <Content>
-                        <Home/>
+                        <StyleDetails/>
                     </Content>
                     <MhFooter/>
                 </Layout>
             </Layout>
-            // <Layout>
-            //     <Sider collapsed= 'true'>
-            //         <MhSide/>
-            //     </Sider>
-            //     <Layout>
-            //         <MhHeader/>
-            //         <Content>
-            //             <StyleDetails/>
-            //         </Content>
-            //         <MhFooter/>
-            //     </Layout>
-            // </Layout>
         );
     }
 }
