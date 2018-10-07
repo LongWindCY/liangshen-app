@@ -1,16 +1,45 @@
 import React from "react";
-import {Card, Col, Row, Steps, Popover} from "antd";
+import {Card, Col, Row, Steps, Popover, Layout,Button, message} from "antd";
 
+const {Content}=Layout;
 const Step = Steps.Step;
 
-const customDot = (dot, { status, index }) => (
-    <Popover content={<span>step {index} status: {status}</span>}>
-        {dot}
-    </Popover>
-);
+const steps = [{
+    title: 'First',
+    content: '样式选择',
+}, {
+    title: 'Second',
+    content: '布料选择',
+}, {
+    title: 'Third',
+    content: '颜色选择',
+}, {
+    title: 'Fourth',
+    content: '尺寸输入',
+}, {
+    title: 'Fifth',
+    content: '保存数据，请在购物车中确认订单',
+}];
 
 class StyleSelect extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            current: 1,
+        };
+    }
+
+    next() {
+        const current = this.state.current + 1;
+        this.setState({ current });
+    }
+
+    prev() {
+        const current = this.state.current - 1;
+        this.setState({ current });
+    }
     render() {
+        const { current } = this.state;
         return (
             <div>
                 <Content style={{ margin: '0px', padding: "50px 250px", minHeight: 450, }}>
@@ -38,20 +67,39 @@ class StyleSelect extends React.Component {
                     </Row>
                 </Content>
                 <Content style={{ margin: '0px', padding: "50px 100px", minHeight: 250, }}>
-                    <Row gutter={16}>
-                        <Col className="gutter-row" span={9}>
-                            <Steps current={1} progressDot={customDot}>
-                                <Step title="样式选择" description="" />
-                                <Step title="布料选择" description="" />
-                                <Step title="颜色选择" description="" />
-                                <Step title="尺寸输入" description="" />
-                                <Step title="保存数据请在购物车中保存订单" description="" />
-                            </Steps>,
-                            mountNode
-                        </Col>
-                    </Row>
+                    <Steps current={current}>
+                        {steps.map(item => <Step key={item.title} title={item.title} />)}
+                    </Steps>
+                    <Content style={{height:'300px'}}>
+                        <div className="steps-content">{steps[current].content}</div>
+                        <Card style={{ width: 300 }}>
+                            <p className="steps-content">{steps[current].content}</p>
+                            <p>Card content</p>
+                            <p>Card content</p>
+                        </Card>
+                    </Content>
+                    <div className="steps-action">
+                        {
+                            current < steps.length - 1
+                            && <Button type="primary" onClick={() => this.next()}>Next</Button>
+                        }
+                        {
+                            current === steps.length - 1
+                            && <Button type="primary" onClick={() => message.success('Processing complete!')}>Done</Button>
+                        }
+                        {
+                            current > 0
+                            && (
+                                <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
+                                    Previous
+                                </Button>
+                            )
+                        }
+                    </div>
                 </Content>
             </div>
         );
     }
 }
+
+export default StyleSelect;

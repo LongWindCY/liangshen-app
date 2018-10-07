@@ -1,13 +1,21 @@
 import React from 'react';
-import { Layout, Menu, Icon, Modal } from 'antd';
+import {Layout, Menu, Icon, Modal, Input, Checkbox, Button, Form} from 'antd';
 
 const {Sider} = Layout;
+const FormItem = Form.Item;
 class MhSide extends React.Component {
-    state = { visible: false }
+    state = { visible: false,
+              visibleuser: false}
 
     showModal = () => {
         this.setState({
             visible: true,
+        });
+    }
+
+    showModalUser = () => {
+        this.setState({
+            visibleUser: true,
         });
     }
 
@@ -24,6 +32,20 @@ class MhSide extends React.Component {
             visible: false,
         });
     }
+
+    handleOkUser = (e) => {
+        console.log(e);
+        this.setState({
+            visibleUser: false,
+        });
+    }
+
+    handleCancelUser = (e) => {
+        console.log(e);
+        this.setState({
+            visibleUser: false,
+        });
+    }
     render() {
         return (
             <Sider
@@ -36,11 +58,34 @@ class MhSide extends React.Component {
                 <div className="leftbar">
                     <Menu theme="dark"
                           mode="inline"
-                        // defaultSelectedKeys={['1']}
                     >
-                        <Menu.Item key="1">
+                        <Menu.Item key="1" onClick={this.showModalUser}>
                             <Icon type="user" />
                             <span>个人信息</span>
+                            <Modal
+                                title="登录"
+                                centered
+                                visible={this.state.visibleUser}
+                                onOk={this.handleOkUser}
+                                onCancel={this.handleCancelUser}
+                            >
+                                <Form onSubmit={this.handleSubmit} className="login-form">
+                                    <FormItem>
+                                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
+                                    </FormItem>
+                                    <FormItem>
+                                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+                                    </FormItem>
+                                    <FormItem>
+                                        <Checkbox>Remember me</Checkbox>
+                                        <a className="login-form-forgot" href="">Forgot password</a>
+                                        <Button type="primary" htmlType="submit" className="login-form-button">
+                                            Log in
+                                        </Button>
+                                        Or <a href="">register now!</a>
+                                    </FormItem>
+                                </Form>
+                            </Modal>
                         </Menu.Item>
                         <Menu.Item key="2">
                             <Icon type="shopping-cart" />
