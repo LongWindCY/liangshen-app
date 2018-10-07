@@ -1,12 +1,15 @@
-import {Router, Route, hashHistory} from 'react-router';
+import {Router, Route, Redirect, IndexRoute, hashHistory} from 'react-router';
+import IndexHome from "../liangshen-mh/js/mh-web/mh-home/IndexHome";
+import IndexStyle from "../liangshen-mh/js/mh-web/mh-styleDetails/IndexDetail";
 import App from "../liangshen-mh/js/App";
-import Home from "../liangshen-mh/js/mh-web/mh-home/Home";
+import React from "react";
+
 
 
 render((
     <Router history={hashHistory}>
         <Route path="/" component={App}/>
-        <Route path="/home" component={Home}/>
-        <Route path="/index" component={Home}/>
+        <Route path="/home" component={IndexHome}/>
+        <Route path="/style" component={IndexStyle}/>
     </Router>
 ),document.getElementById('app'));

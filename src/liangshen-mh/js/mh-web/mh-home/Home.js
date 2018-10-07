@@ -5,24 +5,23 @@ import BackgroundTwo from '../../../../img/2.jpeg';
 import BackgroundThree from '../../../../img/3.jpeg';
 import BackgroundFore from '../../../../img/4.jpeg';
 import Jin from  '../../../../img/jingyiqiujing.jpeg';
-
 const {Content}=Layout;
 const {Meta}=Card;
 class Home extends React.Component{
     render() {
         return(
             <Content>
-                <Carousel autoplay>
-                    <div>
-                        <div style={{backgroundImage: `url(${BackgroundOne})` }}>
+                <Content style={{ margin: '0px', background: 'black', minHeight: 280 }}>
+                    <Carousel vertical autoplay>
+                        <div><div style={{backgroundImage: `url(${BackgroundOne})` }}>
                             您的量身定制服
                             开启您的互联网时代
-                        </div>
-                    </div>
-                    <div><div style={{backgroundImage: `url(${BackgroundTwo})` }}>2</div></div>
-                    <div><div style={{backgroundImage: `url(${BackgroundThree})` }}>3</div></div>
-                    <div><div style={{backgroundImage: `url(${BackgroundFore})` }}>4</div></div>
-                </Carousel>
+                        </div></div>
+                        <div><div style={{backgroundImage: `url(${BackgroundTwo})` }}>2</div></div>
+                        <div><div style={{backgroundImage: `url(${BackgroundThree})` }}>3</div></div>
+                        <div><div style={{backgroundImage: `url(${BackgroundFore})` }}>4</div></div>
+                    </Carousel>
+                </Content>
                 <Content style={{ margin: '0px', padding: "50px 300px", background: 'black', minHeight: 280 }}>
                     <div className="gutter-example">
                         <Row>
