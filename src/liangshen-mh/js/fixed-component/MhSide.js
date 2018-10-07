@@ -1,8 +1,29 @@
 import React from 'react';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon, Modal } from 'antd';
 
 const {Sider} = Layout;
 class MhSide extends React.Component {
+    state = { visible: false }
+
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    }
+
+    handleOk = (e) => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    }
+
+    handleCancel = (e) => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    }
     render() {
         return (
             <Sider
@@ -25,9 +46,20 @@ class MhSide extends React.Component {
                             <Icon type="shopping-cart" />
                             <span>购物车</span>
                         </Menu.Item>
-                        <Menu.Item key="3">
+                        <Menu.Item key="3" onClick={this.showModal}>
                             <Icon type="home" />
                             <span>收货地址</span>
+                            <Modal
+                                title="默认收货地址"
+                                centered
+                                visible={this.state.visible}
+                                onOk={this.handleOk}
+                                onCancel={this.handleCancel}
+                            >
+                                <p>收货人：程长风</p>
+                                <p>联系电话：13668097777</p>
+                                <p>收货地址：重庆理工大学花溪校区</p>
+                            </Modal>
                         </Menu.Item>
                     </Menu>
                 </div>
